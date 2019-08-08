@@ -1,9 +1,16 @@
 import axios from 'axios';
 
+function getWeatherKey() {
+    try {
+        return process.env.WEATHER_API_KEY || require('../../../weatherKey');
+    }
+    catch (error) {
+        console.log(`ERROR: Failed to get an OpenWeather API key from either process.env.WEATHER_API_KEY or ../../../weatherKey.js in SearchBarActions.js`);
+        return ``;
+    }
+}
 
-const weatherKey = process.env.WEATHER_API_KEY || require('../../../weatherKey') || null;
-
-if(!weatherKey) throw new Error(`ERROR: Failed to get an OpenWeather API key from either process.env.WEATHER_API_KEY or ../../../weatherKey.js in SearchBarActions.js`);
+const weatherKey = getWeatherKey();
 
 export function getWeather(cityName) {
     return {

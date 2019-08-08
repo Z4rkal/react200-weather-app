@@ -33,7 +33,7 @@ class SearchBar extends Component {
                     <button type='button' className='btn btn-outline-info' onClick={() => this.submitSearch('Tokyo')}>Tokyo</button>
                 </div>
                 <div className='input-group'>
-                    <input id='search-bar' className='form-control' type='text' value={searchInput} onChange={this.handleSearchInput} />
+                    <input id='search-bar' className='form-control' type='text' value={searchInput} onChange={this.handleSearchInput} onKeyDown={(e) => { if (e.key === 'Enter') this.submitSearch(searchInput); }} />
                     <div className='input-group-append'>
                         <button className='btn btn-outline-secondary' type='button' onClick={() => this.submitSearch(searchInput)}>Go!</button>
                     </div>
