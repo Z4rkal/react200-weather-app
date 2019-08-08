@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 
-const weatherKey = process.env.WEATHER_API_KEY || require('../../../weatherKey');
+const weatherKey = process.env.WEATHER_API_KEY || require('../../../weatherKey') || null;
+
+if(!weatherKey) throw new Error(`ERROR: Failed to get an OpenWeather API key from either process.env.WEATHER_API_KEY or ../../../weatherKey.js in SearchBarActions.js`);
 
 export function getWeather(cityName) {
     return {
