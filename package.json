@@ -16,7 +16,7 @@
     "@babel/register": "^7.5.5",
     "@babel/runtime": "^7.5.5",
     "axios": "^0.19.0",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^8.3.0",
     "babel-preset-airbnb": "^4.0.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
@@ -38,8 +38,8 @@
     "redux": "^4.0.4",
     "redux-promise-middleware": "^6.1.1",
     "serve-favicon": "^2.5.0",
-    "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   },
   "devDependencies": {
     "axios-mock-adapter": "^1.17.0",
@@ -53,11 +53,11 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-lodash-fp": "^2.2.0-a1",
     "eslint-plugin-react": "^7.14.3",
-    "file-loader": "^4.2.0",
+    "file-loader": "^6.2.0",
     "mocha": "^6.2.0",
     "sinon": "^7.4.1",
     "sinon-chai": "^3.3.0",
-    "url-loader": "^2.1.0"
+    "url-loader": "^4.1.1"
   },
   "repository": {
     "type": "git",
